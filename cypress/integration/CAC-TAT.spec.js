@@ -83,7 +83,7 @@ describe('Central de Atendimento ao Cliente TAT', function(){
 
         cy.get('.success').should('be.visible');
     })
-    it('seleciona um select aleatório', function(){
+    it.only('seleciona um select aleatório', function(){
         cy.get('#product option')
           .its('length', {log: false}).then(n => {
               const randomOptionIndex = Cypress._.random(n - 1);
